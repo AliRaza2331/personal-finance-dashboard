@@ -1,0 +1,40 @@
+# ALI RAZA
+# MCS 275 Project 4
+# I am the sole author of this project, except where contributions of others
+# are noted in README.md.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Manager</title>
+</head>
+<body>
+    <h1>Personal Finance Manager</h1>
+    
+    <h2>Add Transaction</h2>
+    <form action="/" method="post">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required><br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required><br>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" step="0.01" required><br>
+        <button type="submit">Add Transaction</button>
+    </form>
+
+    <h2>Transactions</h2>
+    <ul>
+        {% for tx in transactions %}
+        <li>{{ tx.date }} - {{ tx.category }}: {{ tx.description }} ({{ tx.amount | round(2) }})</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Balance Summary</h2>
+	<p>Income: {{ '%0.2f'|format(income) }}</p>
+	<p>Expenses: {{ '%0.2f'|format(expenses) }}</p>
+	<p>Balance: {{ '%0.2f'|format(balance) }}</p>
+</body>
+</html>
+
