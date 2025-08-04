@@ -1,5 +1,5 @@
 # ALI RAZA
-# MCS 275 Project 4
+# MCS Project 4
 # I am the sole author of this project, except where contributions of others
 # are noted in README.md.
 
@@ -87,4 +87,5 @@ if __name__ == '__main__':
     setup_db()  # Ensure the database is setup at launch
     app.run(debug=True)
     
+
     
