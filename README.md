@@ -1,6 +1,6 @@
 # [Personal Finance Manager]
 
-MCS Spring 2024 Project 4 by [ALI RAZA]
+[ALI RAZA]
 
 ## Description
 
@@ -86,6 +86,7 @@ Contribution: Caroline Dublin, helped approve the topic, aided with testing the 
 
 General Contribution: Reviewed multiple open-source projects related to finance management tools. Code Examples and Snippets.
 These reviews helped understand common architectural patterns and user interface designs. ]
+
 
 
 
