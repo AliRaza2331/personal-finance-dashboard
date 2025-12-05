@@ -44,20 +44,20 @@ these values change with each added transaction. ]
 ## Personal contribution
 
 
-[This project is very much inspired from the taskgain project from the lectures and labs with very little help from outside sources. 
-The use of SQL and SQLite is similar to what was learned in lecture, having a similar execution to solar.py from lecture material. 
+[This project is very much inspired from personal insights in finance with little help from outside sources. 
+The use of SQL and SQLite is added for data reliability. 
 Where you import sqlite module and use the "conn" object to interact with the database. However, I used a function,
 to initialize the database with similar sql syntax. And a different function that connects to the database. 
 The function get_db_connection(): This function sets up a connection to the SQLite database and row_factory = sqlite3.Row makes the row objects accessible by column name.
 And setup_db() ensures the necessary table for storing transactions exists. This function is called before the app starts serving requests, to prepare the database.
 
-To call the html file for webpage display using @app.route('/'), this is similar and learned to lab 13 taskgain project. 
+To call the html file for webpage display using @app.route('/'). 
 The route decorator efines the URL endpoint and supported methods (GET for displaying the page, POST for submitting the form).
 Depending on the HTTP method, it either inserts a new transaction into the database (POST) or fetches existing transactions and balance summaries (GET).
 Redirect: After a POST request, it redirects to the same page to prevent form resubmission issues and to update the display with the new data.
 Render Template: The fetched transactions and summaries are passed to the template for rendering. 
 
-I have utilized commands from sequel query to display all transaction in the database using fetchall() in the following functions similar to that taught in the lecture material.
+I have utilized commands from sequel query to display all transaction in the database using fetchall() in the following functions.
 The get balance summary function calculates the total income, expenses, and net balance from the transactions stored in the database.
 
 Finally, if __name__ == '__main__': app.run(debug=True), ensures that when the Flask application is run directly,
@@ -71,32 +71,22 @@ Next to the entries is a button that utilizes the "transactionform" form
 Under that is another header, Transactions which shows all transaction made with proper date time formats.
 Lastly, the Balance Summary header which displays total income, total expenses and final balance, all values are rounded to two decimal places. ]
 
-[What part of the work to create this project was your personal
-contribution? Be detailed and specific.  If I can't understand exactly
-what you did, as compared to what you adapted from other sources, then
-you haven't written enough.]
 
 ## Sources and credits
 
 
 [ Online Documentation and Tutorials
-Flask Documentation:
-Course Lecture Contribution: Provided comprehensive guidelines and code examples on setting up a Flask application, routing, handling requests, and sending responses.
-The usage of app.run() and request.get_json() were based on examples from this documentation.
-SQLite Documentation:
-COurse Lecture Contribution: Offered detailed instructions on using SQLite databases with Python, including schema design and SQL query execution.
-The structure and operations of the SQLite database in the project were influenced by these guidelines.
-Basic HTML usage is drawn from lecture material
-Citations: MCS 275 David Dumas, Lecture material and Lectures 27-32 
+Flask Documentation: 
 
 W3Schools:
 Citations: URL: W3Schools HTML Forms (https://www.w3schools.com/html/html_forms.asp)
 Contribution: Used to reference HTML form creation and handling input types, and rounding numbers, which were essential for the project's user interface design.
 
-Contribution: Lab TA, Caroline Dublin, helped approve the topic, aided with testing the code and make appropriate changes.
+Contribution: Caroline Dublin, helped approve the topic, aided with testing the code and make appropriate changes.
 
 General Contribution: Reviewed multiple open-source projects related to finance management tools. Code Examples and Snippets.
 These reviews helped understand common architectural patterns and user interface designs. ]
+
 
 
 
